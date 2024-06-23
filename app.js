@@ -78,14 +78,36 @@ const displayInfo = (data) => {
   const { 
       name, 
       main: {temp, humidity}, 
-      weather: [{description}] } = data;
+      weather: [{description, id}] } = data;
 
   card.innerHTML = `
     <h1 class="city-display">${name}</h1>
     <p class="temp-display">${(temp - 273.15).toFixed(1)}°C</p>
     <p>Humidity: ${humidity}%</p>
     <p>Description: ${description}</p>
+    <p>${getWeatherIcon(id)}</p>
   `;
   card.style.display = 'block';
   card.classList.add('card');
 }
+
+const getWeatherIcon = ((weatherId) => {
+  switch(true) {
+    case weatherId >= 200 && weatherId < 300:
+      return '⛈️';
+    case weatherId >= 300 && weatherId < 400:
+      return '🌧️'
+    case weatherId >= 500 && weatherId < 600:
+      return '🌧️';
+    case weatherId >= 600 && weatherId < 700:
+      return '❄️';
+    case weatherId >= 700 && weatherId < 800:
+      return '🌫️';
+    case weatherId === 800:
+      return '☀️';
+    case weatherId >= 801 && weatherId< 900:
+      return '☁️'; 
+    default:
+      return '❓';
+    }
+});
