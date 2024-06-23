@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #E6F3F8;
+  color: #2C3E50 ;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px;
+  background-color: #70b8ce;
+}
+
+header form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+[type="text"]:focus {
+  outline: none;
+  border-color: #3498DB;
+}
+
+[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498DB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 70%;
+}
+
+[type="submit"]:hover {
+  background-color: #2980B9;
+}
+
+[type="submit"]:hover {
+  background-color: #2980B9;
+}
+
+#map {
+  height: 50vh;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 50px;
+  background: linear-gradient(to bottom, #87CEEB, #E0F6FF);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+}
+
+.card  h1 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.temp-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+@media (max-width: 575px) {
+  .header-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  [type="text"] {
+    width: 100%;
+  }
+
+  [type="submit"] {
+    width: 100%;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .temp-display {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    overflow: auto;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .card h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .temp-display {
+    font-size: 1.5rem;
+  }
+
+  #map {
+    height: 40vh;
+  }
+}

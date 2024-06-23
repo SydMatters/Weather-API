@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice APIs</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <header class="header-container">
+      <h1>GeoClimate</h1>
+      <form class="weather-form">
+        <input type="text" placeholder="Enter your location" id="autocomplete">
+        <button class="search-button" type="submit">Get Weather</but placeholder="Enter your location"ton>
+      </form>
+    </header>
+    <div id="map"></div>
+    <section>
+      <div class="card" style="display: none;">
+      </div>
+    </section>
+    <script async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPVtaCWbQSaLrcFHw8bTkcpngvS-qMvT0&loading=async&libraries=places&callback=initMap">
+    </script>
+    <script src="./app.js"></script>
+  </body>
+</html>
